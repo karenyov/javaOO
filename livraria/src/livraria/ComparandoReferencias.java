@@ -10,7 +10,7 @@ public class ComparandoReferencias {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		Autor autor = new Autor();
+		/*Autor autor = new Autor();
 		autor.nome = "Rodrigo Turini";
 		autor.email = "rodrigo.turini@caelum.com.br";
 		autor.cpf = "123.456.789.10";
@@ -24,7 +24,7 @@ public class ComparandoReferencias {
 			System.out.println("Iguais, mesmo autor!");
 		} else {
 			System.out.println("hein!? Por que diferentes?");
-		}
+		}*/
 
 	}
 

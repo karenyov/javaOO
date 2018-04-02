@@ -5,14 +5,15 @@ package livraria;
  */
 public class Livro {
 
-	String nome;
-	String descricao;
-	double valor;
-	String isbn;
-	Autor autor;
+	private String nome;
+	private String descricao;
+	private double valor;
+	private String isbn;
+	private Autor autor;
 
-	public Livro() {
-		System.out.println("novo livro criado");
+	public Livro(Autor autor) {
+		this.autor = autor;
+		this.isbn = "000-00-00000-00-0";
 	}
 
 	void mostrarDetalhes() {
@@ -29,12 +30,92 @@ public class Livro {
 
 	}
 
-	public void aplicaDescontoDe(double porcentagem) {
+	public boolean aplicaDescontoDe(double porcentagem) {
+		if (porcentagem > 0.3) {
+			return false;
+		}
+
 		this.valor -= this.valor * porcentagem;
+		return true;
 	}
 
 	boolean temAutor() {
 		return this.autor != null;
+	}
+
+	/**
+	 * @return the nome
+	 */
+	public String getNome() {
+		return nome;
+	}
+
+	/**
+	 * @param nome
+	 *            the nome to set
+	 */
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	/**
+	 * @return the descricao
+	 */
+	public String getDescricao() {
+		return descricao;
+	}
+
+	/**
+	 * @param descricao
+	 *            the descricao to set
+	 */
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	/**
+	 * @return the valor
+	 */
+	public double getValor() {
+		return valor;
+	}
+
+	/**
+	 * @param valor
+	 *            the valor to set
+	 */
+	public void setValor(double valor) {
+		this.valor = valor;
+	}
+
+	/**
+	 * @return the isbn
+	 */
+	public String getIsbn() {
+		return isbn;
+	}
+
+	/**
+	 * @param isbn
+	 *            the isbn to set
+	 */
+	public void setIsbn(String isbn) {
+		this.isbn = isbn;
+	}
+
+	/**
+	 * @return the autor
+	 */
+	public Autor getAutor() {
+		return autor;
+	}
+
+	/**
+	 * @param autor
+	 *            the autor to set
+	 */
+	public void setAutor(Autor autor) {
+		this.autor = autor;
 	}
 
 }
