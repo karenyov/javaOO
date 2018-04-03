@@ -10,14 +10,26 @@ public class RegrasDeDesconto {
 	 */
 	public static void main(String[] args) {
 
-		/*Livro livro = new Livro();
+		Autor autor = new Autor();
+		autor.setNome("Rodrigo Turini");
+
+		Livro livro = new Livro(autor);
 		livro.setValor(59.90);
 
-		System.out.println("Valor atual: " + livro.getValor());
+		if (!livro.aplicaDescontoDe(0.3)) {
+			System.out.println("Desconto no livro não pode ser maior do que 30%");
+		} else {
+			System.out.println("Valor do livro com desconto: " + livro.getValor());
+		}
 
-		livro.valor -= livro.valor * 0.4;
+		Ebook ebook = new Ebook(autor);
+		ebook.setValor(29.90);
 
-		System.out.println("Valor com desconto: " + livro.valor);*/
+		if (!ebook.aplicaDescontoDe(0.3)) {
+			System.out.println("Desconto no ebook não pode ser maior do que 15%");
+		} else {
+			System.out.println("Valor do ebook com desconto: " + ebook.getValor());
+		}
 
 	}
 
