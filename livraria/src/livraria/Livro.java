@@ -3,7 +3,7 @@ package livraria;
 /**
  * @author Karen 29 de mar de 2018
  */
-public class Livro {
+public abstract class Livro {
 
 	private String nome;
 	private String descricao;
@@ -30,14 +30,7 @@ public class Livro {
 
 	}
 
-	public boolean aplicaDescontoDe(double porcentagem) {
-		if (porcentagem > 0.3) {
-			return false;
-		}
-
-		this.valor -= this.valor * porcentagem;
-		return true;
-	}
+	public abstract boolean aplicaDescontoDe(double porcentagem);
 
 	boolean temAutor() {
 		return this.autor != null;
