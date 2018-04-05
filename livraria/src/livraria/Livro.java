@@ -3,7 +3,7 @@ package livraria;
 /**
  * @author Karen 29 de mar de 2018
  */
-public abstract class Livro {
+public abstract class Livro implements Produto {
 
 	private String nome;
 	private String descricao;
@@ -16,7 +16,7 @@ public abstract class Livro {
 		this.isbn = "000-00-00000-00-0";
 	}
 
-	void mostrarDetalhes() {
+	public void mostrarDetalhes() {
 		System.out.println("Mostrando detalhes do livro ");
 		System.out.println("Nome: " + nome);
 		System.out.println("Descrição: " + descricao);
@@ -29,8 +29,6 @@ public abstract class Livro {
 		System.out.println("--");
 
 	}
-
-	public abstract boolean aplicaDescontoDe(double porcentagem);
 
 	boolean temAutor() {
 		return this.autor != null;

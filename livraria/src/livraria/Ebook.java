@@ -3,7 +3,7 @@ package livraria;
 /**
  * @author Karen 3 de abr de 2018
  */
-public class Ebook extends Livro {
+public class Ebook extends Livro implements Promocional {
 
 	private String waterMark;
 
@@ -12,7 +12,9 @@ public class Ebook extends Livro {
 		if (porcentagem > 0.15) {
 			return false;
 		}
-		return super.aplicaDescontoDe(porcentagem);
+		double desconto = getValor() * porcentagem;
+		setValor(getValor() - desconto);
+		return true;
 	}
 
 	/**

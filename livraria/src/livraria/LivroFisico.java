@@ -3,7 +3,7 @@ package livraria;
 /**
  * @author Karen 3 de abr de 2018
  */
-public class LivroFisico extends Livro {
+public class LivroFisico extends Livro implements Promocional{
 
 	/**
 	 * @param autor
