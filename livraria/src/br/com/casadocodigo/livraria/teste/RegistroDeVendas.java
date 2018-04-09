@@ -29,6 +29,8 @@ public class RegistroDeVendas {
 		CarrinhoDeCompras carrinho = new CarrinhoDeCompras();
 		carrinho.adiciona(fisico);
 		carrinho.adiciona(ebook);
+		
+		carrinho.getProdutos();
 
 		System.out.println("Total " + carrinho.getTotal());
 	}
